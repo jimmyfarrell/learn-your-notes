@@ -11,8 +11,13 @@ module.exports = function (server) {
     io.on('connection', function (socket) {
 
         socket.on('phone:newNote', function(note) {
-            socket.emit('note:change', note)
+            socket.broadcast.emit('note:change', note)
         });
+
+        //socket.on('disconnect', function() {
+            //console.log('disconnected')
+            //socket.broadcast.emit('disconnect:phone');
+        //});
 
     });
 
