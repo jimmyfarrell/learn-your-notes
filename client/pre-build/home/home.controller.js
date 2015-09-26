@@ -15,7 +15,6 @@ app.controller('HomeController', function($scope, $http) {
 	var tone = new Tone();
 
 	window.addEventListener('deviceorientation', function(event) {
-  		//$scope.msgFromScope = "I'm playing " + event.beta;
   		console.log("Orientation val: " + event.beta);
   		var orientation = event.beta+0;
   		if (orientation < BETA_MIN) {
@@ -32,7 +31,7 @@ app.controller('HomeController', function($scope, $http) {
 								"\nbecause the phone's orientation is " + orientation;
   		$scope.$digest();
 
-  		//Play the note
+
 		synth.triggerAttack(note);
 	}); 
 	
@@ -40,6 +39,4 @@ app.controller('HomeController', function($scope, $http) {
 
 
 });
-
-// working range is 0 to -90 
 
