@@ -6,3 +6,20 @@ app.config(function ($urlRouterProvider, $locationProvider) {
    // If we go to a URL that ui-router doesn't have registered, go to the "/" url.
    $urlRouterProvider.otherwise('/');
 });
+
+//app.factory('Socket', function ($location) {
+
+    //if (!window.io) throw new Error('socket.io not found!');
+
+    //var socket;
+
+    //if ($location.$$port) {
+        //socket = io('http://localhost:4545');
+    //} else {
+        //socket = io('/');
+    //}
+
+    //return socket;
+
+//});
+
